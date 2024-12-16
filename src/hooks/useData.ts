@@ -7,12 +7,6 @@ interface FetchResponse<T> {
     results: T[];
 }
 
-interface Genre {
-    id: number;
-    name: string;
-}
-
-
 function useData<T>(endpoint: string) {
     const [data, setData] = useState<T[]>([]);
     const [error, setError] = useState("");
