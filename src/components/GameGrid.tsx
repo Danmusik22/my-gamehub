@@ -17,13 +17,13 @@ function GameGrid() {
                 spacing={3}
             >
                 {isLoading &&
-                    skeletons.map((skeleton) => (
+                    skeletons.map((skeleton) => 
                         <GameCardContainer>
                             <GameCardSkeleton key={skeleton} />
                         </GameCardContainer>
-                    ))}
+                    )}
                 {data.map((game) => (
-                    <GameCardContainer>
+                    <GameCardContainer key={game.id}>
                         <GameCard key={game.id} game={game} />
                     </GameCardContainer>
                 ))}

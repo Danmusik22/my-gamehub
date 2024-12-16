@@ -24,8 +24,9 @@ function useData<T>(endpoint: string) {
                 })
                 .catch((err) => {
                     if (err instanceof CanceledError) return;
-                    setError(err.message)});
+                    setError(err.message)
                     setLoading(false);
+                });
 
             return () => controller.abort();
         }, []);
